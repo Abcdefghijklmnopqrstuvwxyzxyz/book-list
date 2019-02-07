@@ -1,0 +1,31 @@
+.book-title
+{
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.book-isbn {
+    margin: 0 5px;
+}
+
+.book-barcode {
+    width: 100px;
+    height: 50px;
+}
+
+.book-btn-delete {
+    height: 30px;
+    width: 80px;
+    margin-left: 20px;
+}
+
+@media print {
+    .book-btn-delete {
+        display: none!important;
+    }
+    .book-barcode {
+        width: 150px;
+        height: 75px;
+    }
+}

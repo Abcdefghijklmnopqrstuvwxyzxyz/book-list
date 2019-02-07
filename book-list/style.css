@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Microsoft YaHei UI", "微软雅黑", Arial, Helvetica, sans-serif;
+}
+
+span {
+    display: inline-block;
+}
+
+html {
+    background-color: gainsboro;
+}
+
+.container {
+    width: 100%;
+}
+
+.content {
+    width: 60%;
+    height: 100%;
+    min-width: 665px;
+    margin:auto;
+
+    padding: 40px 10px 30px 10px;
+    border: 1px solid gray;
+    background-color: white;
+}
+
+.control-panel {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 14px 12px;
+}
+
+.control-panel > p {
+    margin: 20px 12px;;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.form-add {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#book-add {
+    width: 100px;
+}
+
+.form-control {
+    border-radius: 6px;
+}
+
+.form-control input {
+    width: 200px;
+    height: 30px;
+}
+
+.book-list li {
+    list-style: none;
+    padding: 10px 0;
+    vertical-align: center;
+}

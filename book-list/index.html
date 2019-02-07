@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/jquery-ean13@2.2.5/dist/ean13.min.js"></script>
+    <script src="ele.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="print.css" type="text/css" media="print"/>
+    <title>Book Lists</title>
+</head>
+<body>
+    <template id="book-list-temp">
+        <link rel="stylesheet" href="ele.css" type="text/css"/>
+        <span class="book-title"></span>
+        <span class="book-isbn"></span>
+        <canvas class="book-barcode" ></canvas>
+        <button class="book-btn-delete">删除</button>
+    </template>
+    <div class="container">
+        <div class="content">
+            <h1>购书清单</h1>
+            <div class="control-panel">
+            <div class="form-add">
+                <div class="form-control">
+                    <label for="book-name" id="book-name__label">书名</label>
+                    <input id="book-name" class="form-input"/>
+                </div>
+                <div class="form-control">
+                    <label for="book-isbn" id="book-isbn__label">ISBN</label>
+                    <input id="book-isbn" class="form-input"/>
+                </div>
+                <button id="book-add" class="form-submit">添加</button>
+            </div>
+            <p>
+                打印说明：在Chrome（360浏览器极速模式）、Firefox浏览器中选择打印该网页即可。
+            </p>
+            <p>
+                <button id="print-btn">
+                    打印
+                </button>
+            </p>
+            </div>
+            <div class="book-list">
+                <ul id="book-list">
+                    <li><book-item title="算法竞赛入门经典（第二版）" isbn="9787302356288"/></li>
+                    <li><book-item title="基础有机化学（第4版）习题解析" isbn="9787301291337"/></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.querySelector('#print-btn').addEventListener('click', e => {
+            window.print();
+        });
+    </script>
+    <script src="main.js"></script>
+    <!-- IF IE
+        <script> document.innerHTML="<h1>IE is not supported.!"</script>
+    -->
+</body>
+</html>
